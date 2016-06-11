@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.whiwol.formulariocontacto.ConfirmarDatos"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/lblTituloConfirmar"
+        android:id="@+id/tvConfirmarDatos"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/abc_text_size_display_1_material"
+        android:paddingBottom="@dimen/margen_inferior_1"
+        android:textColor="@color/colorBlanco"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvDatos"
+        android:layout_below="@id/tvConfirmarDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="@dimen/radio_cardview"
+        android:paddingBottom="@dimen/margen_inferior_1"
+        android:elevation="@dimen/elevacion_cardview">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:paddingLeft="@dimen/texto_tamaño_edit_lbl">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/nombreConfirmar"
+                android:id="@+id/tvNombreConfirmar"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="@dimen/texto_tamaño_edit"
+                android:paddingBottom="@dimen/texto_tamaño_edit_lbl"
+                android:textColor="@color/colorBlanco" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/lblNacimiento2"
+                android:id="@+id/lblNacimientoConfirmar"
+                android:layout_below="@+id/tvNombreConfirmar"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="@dimen/texto_tamaño_edit_lbl"
+                android:textColor="@color/colorBlanco"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/nacimientoConfirmar"
+                android:id="@+id/tvNacimientoConfirmar"
+                android:textSize="@dimen/texto_tamaño_edit_lbl"
+                android:layout_alignTop="@+id/lblNacimientoConfirmar"
+                android:layout_toRightOf="@+id/lblNacimientoConfirmar"
+                android:layout_toEndOf="@+id/lblNacimientoConfirmar"
+                android:textStyle="bold"
+                android:paddingBottom="@dimen/margen_inferior_2"
+                android:textColor="@color/colorBlanco"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/htelefono2"
+                android:id="@+id/lblTelefonoConfirmar"
+                android:layout_below="@+id/tvNacimientoConfirmar"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="@dimen/texto_tamaño_edit_lbl"
+                android:textColor="@color/colorBlanco"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/telefonoConfirmar"
+                android:id="@+id/tvTelefonoConfirmar"
+                android:textSize="@dimen/texto_tamaño_edit_lbl"
+                android:layout_alignTop="@+id/lblTelefonoConfirmar"
+                android:layout_toRightOf="@+id/lblTelefonoConfirmar"
+                android:layout_toEndOf="@+id/lblTelefonoConfirmar"
+                android:textStyle="bold"
+                android:paddingBottom="@dimen/margen_inferior_2"
+                android:textColor="@color/colorBlanco"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/hcorreo2"
+                android:id="@+id/lblCorreoConfirmar"
+                android:layout_below="@+id/tvTelefonoConfirmar"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="@dimen/texto_tamaño_edit_lbl"
+                android:textColor="@color/colorBlanco"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/correoConfirmar"
+                android:id="@+id/tvCorreoConfirmar"
+                android:textSize="@dimen/texto_tamaño_edit_lbl"
+                android:layout_alignTop="@+id/lblCorreoConfirmar"
+                android:layout_toRightOf="@+id/lblCorreoConfirmar"
+                android:layout_toEndOf="@+id/lblCorreoConfirmar"
+                android:textStyle="bold"
+                android:paddingBottom="@dimen/margen_inferior_2"
+                android:textColor="@color/colorBlanco"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/hdescripcion2"
+                android:id="@+id/lblDescripcionConfirmar"
+                android:layout_below="@+id/tvCorreoConfirmar"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="@dimen/texto_tamaño_edit_lbl"
+                android:textColor="@color/colorBlanco"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/descripcionConfirmar"
+                android:id="@+id/tvDescripcionConfirmar"
+                android:textSize="@dimen/texto_tamaño_edit_lbl"
+                android:layout_alignTop="@+id/lblDescripcionConfirmar"
+                android:layout_toRightOf="@+id/lblDescripcionConfirmar"
+                android:layout_toEndOf="@+id/lblDescripcionConfirmar"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlanco"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/btnEditar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/editar"
+        android:theme="@style/MiBotonRaised"
+        android:layout_below="@+id/cvDatos"
+        android:layout_centerHorizontal="true"
+        android:onClick="ejecutarEdit"/>
+
+
+
+</RelativeLayout>

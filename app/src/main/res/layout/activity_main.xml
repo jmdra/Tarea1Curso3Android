@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.whiwol.formulariocontacto.MainActivity"
+    android:background="@color/colorPrimary">
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNombreCompleto">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/tiNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hnombre"
+            android:textColor="@color/colorBlanco"
+            android:textStyle="bold"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/tvNombreCompleto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alto_cardview"
+        card_view:cardCornerRadius="@dimen/radio_cardview"
+        android:elevation="@dimen/elevacion_cardview"
+        android:background="@color/colorPrimary"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/margen_superior_cardview"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/lblNacimiento"
+                android:id="@+id/tvNacimiento"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/margen_derecho_1"
+                android:layout_marginEnd="@dimen/margen_derecho_1"
+                android:textColor="@color/colorBlanco"
+                android:textStyle="bold"/>
+
+            <DatePicker
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/alto_calendario"
+                android:id="@+id/datePickerNacimiento"
+                android:textAlignment="center"
+                android:spinnersShown="true"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:importantForAccessibility="no"
+                android:layout_below="@id/tvNacimiento"
+                android:background="@color/colorPrimary"
+                android:yearListItemTextAppearance="@color/colorBlanco"
+                android:dayOfWeekTextAppearance="@color/colorBlanco"
+                android:calendarTextColor="@color/colorBlanco"
+                android:headerDayOfMonthTextAppearance="@color/colorBlanco"
+                android:headerMonthTextAppearance="@color/colorBlanco"
+                android:headerYearTextAppearance="@color/colorBlanco" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/lblSet"
+                android:id="@+id/tvSet"
+                android:layout_above="@+id/datePickerNacimiento"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="@dimen/margen_izquierdo_1"
+                android:layout_marginStart="@dimen/margen_izquierdo_1"
+                android:textColor="@color/colorBlanco"
+                android:textStyle="bold"/>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTelefono">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/tiTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/datePicker"
+            android:hint="@string/htelefono"
+            android:inputType="number"
+            android:textColor="@color/colorBlanco"
+            android:textStyle="bold"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCorreo">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/tiCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTelefono"
+            android:hint="@string/hcorreo"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/colorBlanco"
+            android:textStyle="bold"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDescripcion">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/tiDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCorreo"
+            android:hint="@string/hdescripcion"
+            android:textColor="@color/colorBlanco"
+            android:textStyle="bold"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnSiguiente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tiDescripcion"
+        android:text="@string/siguiente"
+        android:theme="@style/MiBotonRaised"
+        android:onClick="ejecutarNext"/>
+
+
+</LinearLayout>
